@@ -1,5 +1,6 @@
 package org.jetbrains.kotlinx.spi.ksp
 
+import org.jetbrains.kotlin.name.ClassId
 import org.jetbrains.kotlin.name.FqName
 import org.objectweb.asm.AnnotationVisitor
 import org.objectweb.asm.ClassReader
@@ -62,7 +63,7 @@ private class ClassVisitorImpl : ClassVisitor(Opcodes.ASM9) {
     override fun visitAnnotation(descriptor: String?, visible: Boolean): AnnotationVisitor? {
         if (descriptor == "L$SPI_SERVICE_ANNOTATION_FQN;") {
             return AnnotationVisitorImpl { ordinal, service ->
-                declarations.add(ServiceDeclaration(FqName(service), FqName(className!!), ordinal))
+                declarations.add(ServiceDeclaration(FqName(service), ClassId.fromString(className!!).asSingleFqName(), ordinal))
             }
         }
         return null
