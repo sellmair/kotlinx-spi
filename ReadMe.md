@@ -2,8 +2,8 @@
 This prototype acts as a 'Proof of Concept' and is not yet endorsed by JetBrains or Kotlin by any means. 
 
 ## Motivation
-Java's ServiceLoader is a pretty popular implementation of a generic 'Service Provider Interface'. 
-This ServiceLoader (and similar mechanisms) however have the following problems:
+Java's ServiceLoader is a pretty popular implementation of a generic 'Service Provider Interface.' 
+This ServiceLoader (and similar mechanisms), however, have the following problems:
 - They do not support Kotlin/Native
 - Reflection or IO at runtime might be undesirable for some applications
 - Reflection might be unsafe
