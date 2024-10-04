@@ -1,4 +1,5 @@
 # kotlinx.spi: Static, Kotlin Multiplatform ServiceLoader replacement
+## Demo: https://youtu.be/hMk04PjVh9M
 This prototype acts as a 'Proof of Concept' and is not yet endorsed by JetBrains or Kotlin by any means. 
 
 ## Motivation
